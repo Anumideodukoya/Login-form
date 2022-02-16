@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: arial;
+
+}
+html, body {
+    height: 100%;
+}
+body {
+    /* background-color: aqua; */
+    background-image: linear-gradient(90deg, rgb(100, 226, 226), rgb(6, 189, 189));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form {
+    background-color: rgb(96, 206, 206);
+    backdrop-filter: blur(5px);
+    box-shadow: rgb(54, 131, 105);
+    padding: 50px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 10px;
+    color: black;
+    position: relative;
+    animation-delay: 0.8s;
+}
+form h1 {
+    font-size: 25px;
+    
+}
+form label {
+    background-color: cadetblue;
+    border-radius: 8px;
+    border: 1px dashed lightcyan;
+}
+form label:not(#username, #password) {
+    background-color: transparent;
+    border: none;
+}
+
+form label input {
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    
+}
+form label :-ms-input-placeholder {
+    color: white;
+}
+
+form button {
+    align-self: flex-start;
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: none;
+    background-color: azure;
+}
+
+
+form p a {
+    color: azure;
+    font-size: 14px;
+}
+
+form [class*="glass"] {
+    /* width: 100px;
+    height: 100px; */
+    position: absolute;
+    background-color: rgba(59, 158, 165, 0.644);
+    border-radius: 10px;
+    /* filter: blur(1px); */
+    border: 1px dashed rgb(153, 1, 47);
+animation: fadein 1.5s 1s forwards infinite alternate;    
+}
+.glass1 {
+    top: -20px;
+    left: -20px;
+    width: 40px;
+    height: 40px;
+    
+
+}
+.glass2 {
+width: 110px;
+height: 110px;
+top: 20%;
+left: -95px;
+}
+
+.glass3 {
+    bottom: -20px;
+    left: -20px;
+    width: 40px;
+    height: 40px;
+
+}
+.glass4 {
+    top: -20px;
+    right: -40px;
+    width: 95px;
+    height: 95px;
+    
+}
+
+.glass5 {
+    width: 80px;
+    height: 80px;
+    right: -140px;
+    top: 40%;
+
+}
+
+.glass6 {
+    bottom: -10px;
+    right: -20px;
+    width: 40px;
+    height: 40px;
+}
+form::after {
+    content: "";
+    width: 98%;
+    height: 98%;
+    background-color: rgb(2, 191, 197);
+    filter: blur(1px) ;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    z-index: -1;
+
+}
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+}
